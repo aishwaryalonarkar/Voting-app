@@ -1,0 +1,28 @@
+{% extends 'voteapp/base.html' %}
+{% block content %}
+{% csrf_token %}
+
+<br>
+<div class="container ">
+<table class="table table-striped table-bordered text-light bg-dark">
+<tr>
+<td style="width: 50%;" >Party</td>
+<td>Votes</td>
+</tr>
+</table>
+{% for a in Party %}
+
+<table class="table table-striped table-bordered text-danger" >
+<tr>
+<th style="width: 50%;" >{{ a.party_name }}</th>
+<th>{{ a.no_of_votes }}</th>
+</tr>
+</table>
+{% endfor %}
+</div>
+
+
+<!--a href ="/voteapp"><button>BACK</button></a-->
+
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{# Load the tag library #}
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <script defer src="{% static 'fontawesome/js/fontawesome-all.min.js' %}"></script>
+</head>
+<body>
+    <script src="{% static 'bootstrap/js/jquery.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+
+
+<nav id="navbar-example2" class="navbar navbar-dark bg-dark text-light">
+  <a class="text-light" href ="/voteapp">HOME</a>
+  <a class="text-light" href="/voteapp/viewparty">VOTE</a>
+  <a class="text-light" href="/voteapp/newparty">REGISTER_NEW</a>
+  <a class="text-light" href="/voteapp/viewresults">SEE RESULTS</a>
+</nav>
+
+ {% block content %}{% endblock content %}

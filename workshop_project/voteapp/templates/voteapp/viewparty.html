@@ -1,0 +1,26 @@
+{% extends 'voteapp/base.html' %}
+{% block content %}
+{% csrf_token %}
+
+{% for a in Party %}
+
+<div class="container">
+<div class="row"><img src="/{{ a.party_logo.url }}" class=" w-25 h-25 rounded-circle"/>
+
+{{ a.party_name }}
+
+<a href="{%url 'voteapp:viewinfo' a.id%}">
+<button>KNOW MORE</button></a>
+
+<a href ="{% url 'voteapp:incvote' a.id %}">
+<button>VOTE</button></a>
+
+
+<a href ="{% url 'voteapp:delete' a.id %}">
+<button>DELETE</button></a>
+
+</div></div>
+{% endfor %}
+
+
+{% endblock %}

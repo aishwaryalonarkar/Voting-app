@@ -1,0 +1,29 @@
+{% extends 'voteapp/base.html' %}
+{% block content %}
+{# Load the tag library #}
+{% load static %}
+
+{% csrf_token %}
+
+
+<img src="/{{ Party.party_logo.url }}" class=" w-15 h-25 rounded-circle"/><br>
+<img src="/{{ Party.leader.url }}" class=" w-15 h-25 rounded-circle"/><br>
+<li><a href ="/voteapp/{{a.id}}/">{{ Party.party_name }}</a></li>
+
+{{  Party.date_of_est }}
+{{	Party.party_name }}
+{{	Party.date_of_est }}
+{{	Party.moto }}
+{{	Party.party_leader }}
+{{	Party.founded_by }}
+{{	Party.party_logo_name }}
+
+<a href ="{% url 'voteapp:update' Party.id %}">
+<button>UPDATE</button></a>
+
+<a href ="/voteapp/viewparty"><button>BACK</button></a>
+
+{% endblock %}
+
+
+

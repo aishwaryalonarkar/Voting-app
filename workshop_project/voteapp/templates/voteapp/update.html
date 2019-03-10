@@ -1,0 +1,32 @@
+{% extends 'voteapp/base.html' %}
+{% block content %}
+{% load static %}
+    {% csrf_token %}
+
+<form method="POST" enctype="multipart/form-data">
+    <fieldset disabled>
+    <label for="party_id">party_id: </label>
+    <input id="party_name" type="text" name="party_name" value="{{ Party.id }}">
+    </fieldset>
+
+    <label for="party_name">party_name: </label>
+    <input id="party_name" type="text" name="party_name" value="{{ Party.party_name }}">
+
+    <label for="date_of_est ">date_of_est : </label>
+    <input id="date_of_est " type="text" name="date_of_est " value="{{ Party.date_of_est }}">
+
+    <label for="moto">moto: </label>
+    <input id="moto" type="text" name="moto" value="{{ Party.moto }}">
+
+    <label for="party_leader">party_leader: </label>
+    <input id="party_leader" type="text" name="party_leader" value="{{ Party.party_leader }}">
+
+    <label for="founded_by">founded_by: </label>
+    <input id="founded_by" type="text" name="founded_by" value="{{ Party.founded_by }}">
+
+    <label for="party_logo_name">party_logo_name: </label>
+    <input id="party_logo_name" type="text" name="party_logo_name" value="{{ Party.party_logo_name }}">
+
+<input type="submit" >
+</form>
+{% endblock %}

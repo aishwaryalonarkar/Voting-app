@@ -1,0 +1,22 @@
+{% extends 'voteapp/base.html' %}
+{% block content %}
+{% load static %}
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form }}<br>
+    
+<input type="submit" >
+</form>
+{% endblock %}
+<!--form method="POST" enctype="multipart/form-data">
+    {{ form.party_name }}
+    {{ form.date_of_est }}
+    {{ form.moto }}
+    {{ form.party_leader }}
+    {{ form.founded_by }}
+    {{ form.party_logo_name }}
+    {{ form.party_logo }}
+    {{ form.leader }}
+    {% csrf_token %}
+<input type="submit" >
+</form-->

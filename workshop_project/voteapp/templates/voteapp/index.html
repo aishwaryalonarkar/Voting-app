@@ -1,0 +1,8 @@
+{% extends 'voteapp/base.html' %}
+
+{% block content %}
+{% csrf_token %}
+<p>
+To Vote: Find your polling place here. You do not need to bring ID to the polls, though if you are a first-time voter you need to bring proof-of-residence such as an ID, a current utility bill, bank statement, paycheck or other government-issued identifying document with your name and Registered Address on it.
+</p>
+{% endblock %}
